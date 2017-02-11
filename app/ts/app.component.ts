@@ -3,7 +3,7 @@ import {Config} from './config-service';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>{{ mainHeading}}</h1>'
+    template: '<h1>{{ mainHeading }}</h1>'
 })
 
 export class AppComponent {
