@@ -1,2 +1,3 @@
 <h1>{{ mainHeading }}</h1>
-<playlist [videoAttributes]="videos"></playlist>
+<playlist [videoAttributes]="videos" (onSelectedVideo)="playsong($event)"></playlist>
+<videoFrame [videoplayerAttribute]="songs"></videoFrame>

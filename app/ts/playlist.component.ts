@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component,Output,EventEmitter} from 'angular2/core';
 import {Videos} from './videos';
 
 @Component({
@@ -8,8 +8,15 @@ import {Videos} from './videos';
 })
 
 export class PlaylistComponents{
+	video:Videos;
+	@Output() onSelectedVideo = new EventEmitter<Videos>();
 
 	onSelect(vid:Videos){
+		console.log(vid.videoCode);
 		console.log(JSON.stringify(vid));
+		this.onSelectedVideo.emit(vid);
+		this.video = vid;
+
+		}
 	}
 }
